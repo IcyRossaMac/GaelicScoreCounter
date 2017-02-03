@@ -1,205 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    style="@style/TeamLayout"
-                    tools:context=".MainActivity">
-
-                    <TextView
-                        style="@style/TeamText"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/tyrone" />
-
-                    <View style="@style/TeamUnderLine" />
-
-                    <LinearLayout
-                        style="@style/TeamLayoutInside"
-                        tools:context=".MainActivity">
-
-                        <TextView
-                            style="@style/GoalsPointsText"
-                            android:fontFamily="sans-serif-medium"
-                            android:text="@string/goals" />
-
-                        <TextView
-                            style="@style/GoalsPointsText"
-                            android:fontFamily="sans-serif-medium"
-                            android:text="@string/points" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/TeamLayoutInside"
-                        tools:context=".MainActivity">
-
-                        <TextView
-                            android:id="@+id/tyrone_goals"
-                            style="@style/GoalsPointsScore"
-                            android:fontFamily="sans-serif-light"
-                            android:text="@string/zero" />
-
-                        <TextView
-                            android:id="@+id/tyrone_points"
-                            style="@style/GoalsPointsScore"
-                            android:fontFamily="sans-serif-light"
-                            android:text="@string/zero" />
-                    </LinearLayout>
-
-                    <TextView
-                        style="@style/TotalScoreText"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/total_score" />
-
-                    <TextView
-                        android:id="@+id/tyrone_total_score"
-                        style="@style/TotalScoreNumber"
-                        android:fontFamily="sans-serif-light"
-                        android:text="@string/zero" />
-
-                    <Button
-                        style="@style/GoalsPointsButton"
-                        android:onClick="addThreePointsAndGoalForTyrone"
-                        android:text="@string/goal_plus_3" />
-
-                    <Button
-                        style="@style/GoalsPointsButton"
-                        android:onClick="addOnePointsForTyrone"
-                        android:text="@string/point_plus_1" />
-
-                </LinearLayout>
-
-                <View style="@style/TeamDivideLine" />
-
-                <LinearLayout
-                    style="@style/TeamLayout"
-                    tools:context=".MainActivity">
-
-                    <TextView
-                        style="@style/TeamText"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/donegal" />
-
-                    <View style="@style/TeamUnderLine" />
-
-                    <LinearLayout
-                        style="@style/TeamLayoutInside"
-                        tools:context=".MainActivity">
-
-                        <TextView
-                            style="@style/GoalsPointsText"
-                            android:fontFamily="sans-serif-medium"
-                            android:text="@string/goals" />
-
-                        <TextView
-                            style="@style/GoalsPointsText"
-                            android:fontFamily="sans-serif-medium"
-                            android:text="@string/points" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/TeamLayoutInside"
-                        tools:context=".MainActivity">
-
-                        <TextView
-                            android:id="@+id/donegal_goals"
-                            style="@style/GoalsPointsScore"
-                            android:fontFamily="sans-serif-light"
-                            android:text="@string/zero" />
-
-                        <TextView
-                            android:id="@+id/donegal_points"
-                            style="@style/GoalsPointsScore"
-                            android:fontFamily="sans-serif-light"
-                            android:text="@string/zero" />
-                    </LinearLayout>
-
-                    <TextView
-                        style="@style/TotalScoreText"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/total_score" />
-
-                    <TextView
-                        android:id="@+id/donegal_total_score"
-                        style="@style/TotalScoreNumber"
-                        android:fontFamily="sans-serif-light"
-                        android:text="@string/zero" />
-
-                    <Button
-                        style="@style/GoalsPointsButton"
-                        android:onClick="addThreePointsAndGoalForDonegal"
-                        android:text="@string/goal_plus_3" />
-
-                    <Button
-                        style="@style/GoalsPointsButton"
-                        android:onClick="addOnePointsForDonegal"
-                        android:text="@string/point_plus_1" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    style="@style/TeamLayout"
-                    tools:context=".MainActivity">
-
-                    <Button
-                        style="@style/HtFtButton"
-                        android:onClick="halfTimeStatus"
-                        android:text="@string/half_time" />
-                </LinearLayout>
-
-                <LinearLayout
-                    style="@style/TeamLayout"
-                    tools:context=".MainActivity">
-
-                    <Button
-                        style="@style/HtFtButton"
-                        android:onClick="fullTimeStatus"
-                        android:text="@string/full_time" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                style="@style/TeamLayout"
+                tools:context=".MainActivity">
 
                 <TextView
-                    android:id="@+id/match_status"
-                    style="@style/StatusText"
+                    style="@style/TeamText"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/tyrone" />
+
+                <View style="@style/TeamUnderLine" />
+
+                <LinearLayout
+                    style="@style/TeamLayoutInside"
+                    tools:context=".MainActivity">
+
+                    <TextView
+                        style="@style/GoalsPointsText"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/goals" />
+
+                    <TextView
+                        style="@style/GoalsPointsText"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/points" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/TeamLayoutInside"
+                    tools:context=".MainActivity">
+
+                    <TextView
+                        android:id="@+id/tyrone_goals"
+                        style="@style/GoalsPointsScore"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/zero" />
+
+                    <TextView
+                        android:id="@+id/tyrone_points"
+                        style="@style/GoalsPointsScore"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/zero" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/TotalScoreText"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/total_score" />
+
+                <TextView
+                    android:id="@+id/tyrone_total_score"
+                    style="@style/TotalScoreNumber"
                     android:fontFamily="sans-serif-light"
-                    android:text="@string/empty" />
+                    android:text="@string/zero" />
+
+                <Button
+                    style="@style/GoalsPointsButton"
+                    android:onClick="addThreePointsAndGoalForTyrone"
+                    android:text="@string/goal_plus_3" />
+
+                <Button
+                    style="@style/GoalsPointsButton"
+                    android:onClick="addOnePointsForTyrone"
+                    android:text="@string/point_plus_1" />
+            </LinearLayout>
+
+            <View style="@style/TeamDivideLine" />
+
+            <LinearLayout
+                style="@style/TeamLayout"
+                tools:context=".MainActivity">
+
+                <TextView
+                    style="@style/TeamText"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/donegal" />
+
+                <View style="@style/TeamUnderLine" />
+
+                <LinearLayout
+                    style="@style/TeamLayoutInside"
+                    tools:context=".MainActivity">
+
+                    <TextView
+                        style="@style/GoalsPointsText"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/goals" />
+
+                    <TextView
+                        style="@style/GoalsPointsText"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/points" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/TeamLayoutInside"
+                    tools:context=".MainActivity">
+
+                    <TextView
+                        android:id="@+id/donegal_goals"
+                        style="@style/GoalsPointsScore"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/zero" />
+
+                    <TextView
+                        android:id="@+id/donegal_points"
+                        style="@style/GoalsPointsScore"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/zero" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/TotalScoreText"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/total_score" />
+
+                <TextView
+                    android:id="@+id/donegal_total_score"
+                    style="@style/TotalScoreNumber"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/zero" />
+
+                <Button
+                    style="@style/GoalsPointsButton"
+                    android:onClick="addThreePointsAndGoalForDonegal"
+                    android:text="@string/goal_plus_3" />
+
+                <Button
+                    style="@style/GoalsPointsButton"
+                    android:onClick="addOnePointsForDonegal"
+                    android:text="@string/point_plus_1" />
             </LinearLayout>
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                style="@style/TeamLayout"
+                tools:context=".MainActivity">
+
+                <Button
+                    style="@style/HtFtButton"
+                    android:onClick="halfTimeStatus"
+                    android:text="@string/half_time" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/TeamLayout"
+                tools:context=".MainActivity">
+
+                <Button
+                    style="@style/HtFtButton"
+                    android:onClick="fullTimeStatus"
+                    android:text="@string/full_time" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/match_status"
+                style="@style/StatusText"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/empty" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                style="@style/ResetButton"
+                android:onClick="resetScores"
+                android:text="@string/reset_scores" />
+        </RelativeLayout>
+
     </LinearLayout>
 
-    <Button
-        style="@style/ResetButton"
-        android:onClick="resetScores"
-        android:text="@string/reset_scores" />
-
-</RelativeLayout>
+</ScrollView>

@@ -7,17 +7,52 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    int totalScoreTyrone = 0;
     int tyroneGoals = 0;
     int tyronePoints = 0;
-    int totalScoreDonegal = 0;
+    int totalScoreTyrone = 0;
     int donegalGoals = 0;
     int donegalPoints = 0;
+    int totalScoreDonegal = 0;
+    private static final String STATE_TYRONEGOALS = "StateOfTyroneGoals";
+    private static final String STATE_TYRONEPOINTS = "StateOfTyronePoints";
+    private static final String STATE_TOTALSCORETYRONE = "StateOfTotalScoreTyrone";
+    private static final String STATE_DONEGALGOALS = "StateOfDonegalGoals";
+    private static final String STATE_DONEGALPOINTS = "StateOfDonegalPoints";
+    private static final String STATE_TOTALSCOREDONEGAL = "StateOfTotalScoreDonegal";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        savedInstanceState.putInt(STATE_TYRONEGOALS, tyroneGoals);
+        savedInstanceState.putInt(STATE_TYRONEPOINTS, tyronePoints);
+        savedInstanceState.putInt(STATE_TOTALSCORETYRONE, totalScoreTyrone);
+        savedInstanceState.putInt(STATE_DONEGALGOALS, donegalGoals);
+        savedInstanceState.putInt(STATE_DONEGALPOINTS, donegalPoints);
+        savedInstanceState.putInt(STATE_TOTALSCOREDONEGAL, totalScoreDonegal);
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        tyroneGoals = savedInstanceState.getInt(STATE_TYRONEGOALS);
+        tyronePoints = savedInstanceState.getInt(STATE_TYRONEPOINTS);
+        totalScoreTyrone = savedInstanceState.getInt(STATE_TOTALSCORETYRONE);
+        donegalGoals = savedInstanceState.getInt(STATE_DONEGALGOALS);
+        donegalPoints = savedInstanceState.getInt(STATE_DONEGALPOINTS);
+        totalScoreDonegal = savedInstanceState.getInt(STATE_TOTALSCOREDONEGAL);
+
+        displayTyroneGoals(tyroneGoals);
+        displayTyronePoints(tyronePoints);
+        displayTyroneTotal(totalScoreTyrone);
+        displayDonegalGoals(donegalGoals);
+        displayDonegalPoints(donegalPoints);
+        displayDonegalTotal(totalScoreDonegal);
     }
 
     /**
@@ -67,30 +102,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the total goals for Tyrone.
-     */
-    public void displayTyroneGoals(int goal) {
-        TextView goalView = (TextView) findViewById(R.id.tyrone_goals);
-        goalView.setText(String.valueOf(goal));
-    }
-
-    /**
-     * Displays the total points for Tyrone.
-     */
-    public void displayTyronePoints(int point) {
-        TextView pointView = (TextView) findViewById(R.id.tyrone_points);
-        pointView.setText(String.valueOf(point));
-    }
-
-    /**
-     * Displays the total score for Tyrone.
-     */
-    public void displayTyroneTotal(int total) {
-        TextView totalView = (TextView) findViewById(R.id.tyrone_total_score);
-        totalView.setText(String.valueOf(total));
-    }
-
-    /**
      * This method is called when the Goal (+3) button for Donegal is clicked.
      */
     public void addThreePointsAndGoalForDonegal(View view) {
@@ -111,6 +122,70 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Displays the total goals for Tyrone.
+     */
+    private void displayTyroneGoals(int goal) {
+        TextView goalView = (TextView) findViewById(R.id.tyrone_goals);
+        goalView.setText(String.valueOf(goal));
+    }
+
+    /**
+     * Displays the total points for Tyrone.
+     */
+    private void displayTyronePoints(int point) {
+        TextView pointView = (TextView) findViewById(R.id.tyrone_points);
+        pointView.setText(String.valueOf(point));
+    }
+
+    /**
+     * Displays the total score for Tyrone.
+     */
+    private void displayTyroneTotal(int total) {
+        TextView totalView = (TextView) findViewById(R.id.tyrone_total_score);
+        totalView.setText(String.valueOf(total));
+    }
+
+    /**
+     * Displays the Half Time Status.
+     */
+    private void displayHalfTimeStatus(String message) {
+        TextView halfTimeView = (TextView) findViewById(R.id.match_status);
+        halfTimeView.setText(message);
+    }
+
+    /**
+     * Displays the Full Time Status.
+     */
+    private void displayFullTimeStatus(String message) {
+        TextView fullTimeView = (TextView) findViewById(R.id.match_status);
+        fullTimeView.setText(message);
+    }
+
+    /**
+     * Displays the total goals for Donegal.
+     */
+    private void displayDonegalGoals(int goal) {
+        TextView goalView = (TextView) findViewById(R.id.donegal_goals);
+        goalView.setText(String.valueOf(goal));
+    }
+
+    /**
+     * Displays the total points for Tyrone.
+     */
+    private void displayDonegalPoints(int point) {
+        TextView pointView = (TextView) findViewById(R.id.donegal_points);
+        pointView.setText(String.valueOf(point));
+    }
+
+    /**
+     * Displays the total score for Donegal.
+     */
+    private void displayDonegalTotal(int total) {
+        TextView totalView = (TextView) findViewById(R.id.donegal_total_score);
+        totalView.setText(String.valueOf(total));
+    }
+
+    /**
      * This method is called when the Reset Scores button is clicked.
      */
     public void resetScores(View view) {
@@ -128,46 +203,6 @@ public class MainActivity extends AppCompatActivity {
         displayDonegalTotal(totalScoreDonegal);
         displayHalfTimeStatus("");
         displayFullTimeStatus("");
-    }
-
-    /**
-     * Displays the Half Time Status.
-     */
-    public void displayHalfTimeStatus(String message) {
-        TextView halfTimeView = (TextView) findViewById(R.id.match_status);
-        halfTimeView.setText(message);
-    }
-
-    /**
-     * Displays the Full Time Status.
-     */
-    public void displayFullTimeStatus(String message) {
-        TextView fullTimeView = (TextView) findViewById(R.id.match_status);
-        fullTimeView.setText(message);
-    }
-
-    /**
-     * Displays the total goals for Donegal.
-     */
-    public void displayDonegalGoals(int goal) {
-        TextView goalView = (TextView) findViewById(R.id.donegal_goals);
-        goalView.setText(String.valueOf(goal));
-    }
-
-    /**
-     * Displays the total points for Tyrone.
-     */
-    public void displayDonegalPoints(int point) {
-        TextView pointView = (TextView) findViewById(R.id.donegal_points);
-        pointView.setText(String.valueOf(point));
-    }
-
-    /**
-     * Displays the total score for Donegal.
-     */
-    public void displayDonegalTotal(int total) {
-        TextView totalView = (TextView) findViewById(R.id.donegal_total_score);
-        totalView.setText(String.valueOf(total));
     }
 }
 
