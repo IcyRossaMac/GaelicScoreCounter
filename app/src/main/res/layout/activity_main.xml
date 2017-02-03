@@ -63,40 +63,23 @@
                     </LinearLayout>
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        style="@style/TotalScoreText"
                         android:fontFamily="sans-serif-medium"
-                        android:gravity="center_horizontal"
-                        android:padding="8dp"
-                        android:text="Total Score"
-                        android:textSize="14sp" />
+                        android:text="Total Score" />
 
                     <TextView
                         android:id="@+id/tyrone_total_score"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
+                        style="@style/TotalScoreNumber"
                         android:fontFamily="sans-serif-light"
-                        android:gravity="center_horizontal"
-                        android:text="0"
-                        android:textColor="#000000"
-                        android:textSize="32sp" />
+                        android:text="0" />
 
                     <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginRight="24dp"
+                        style="@style/GoalsPointsButton"
                         android:onClick="addThreePointsAndGoalForTyrone"
                         android:text="Goal (+3)" />
 
                     <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginRight="24dp"
+                        style="@style/GoalsPointsButton"
                         android:onClick="addOnePointsForTyrone"
                         android:text="Point (+1)" />
 
@@ -148,40 +131,23 @@
                     </LinearLayout>
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        style="@style/TotalScoreText"
                         android:fontFamily="sans-serif-medium"
-                        android:gravity="center_horizontal"
-                        android:padding="8dp"
-                        android:text="Total Score"
-                        android:textSize="14sp" />
+                        android:text="Total Score" />
 
                     <TextView
                         android:id="@+id/donegal_total_score"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
+                        style="@style/TotalScoreNumber"
                         android:fontFamily="sans-serif-light"
-                        android:gravity="center_horizontal"
-                        android:text="0"
-                        android:textColor="#000000"
-                        android:textSize="32sp" />
+                        android:text="0" />
 
                     <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginRight="24dp"
+                        style="@style/GoalsPointsButton"
                         android:onClick="addThreePointsAndGoalForDonegal"
                         android:text="Goal (+3)" />
 
                     <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginRight="24dp"
+                        style="@style/GoalsPointsButton"
                         android:onClick="addOnePointsForDonegal"
                         android:text="Point (+1)" />
 
@@ -199,12 +165,7 @@
                     tools:context=".MainActivity">
 
                     <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginRight="24dp"
-                        android:layout_marginTop="24dp"
+                        style="@style/HtFtButton"
                         android:onClick="halfTimeStatus"
                         android:text="Half Time" />
                 </LinearLayout>
@@ -214,12 +175,7 @@
                     tools:context=".MainActivity">
 
                     <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginRight="24dp"
-                        android:layout_marginTop="24dp"
+                        style="@style/HtFtButton"
                         android:onClick="fullTimeStatus"
                         android:text="Full Time" />
                 </LinearLayout>
@@ -232,13 +188,9 @@
 
                 <TextView
                     android:id="@+id/match_status"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    style="@style/StatusText"
                     android:fontFamily="sans-serif-light"
-                    android:gravity="center_horizontal"
-                    android:text=""
-                    android:textSize="16sp" />
+                    android:text="" />
             </LinearLayout>
 
         </LinearLayout>
@@ -246,11 +198,7 @@
     </LinearLayout>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="8dp"
+        style="@style/ResetButton"
         android:onClick="resetScores"
         android:text="Reset Scores" />
 
