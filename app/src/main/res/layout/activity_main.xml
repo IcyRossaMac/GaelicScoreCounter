@@ -19,88 +19,47 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
+                    style="@style/TeamLayout"
                     tools:context=".MainActivity">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        style="@style/TeamText"
                         android:fontFamily="sans-serif-medium"
-                        android:gravity="center_horizontal"
-                        android:paddingBottom="4dp"
-                        android:paddingTop="12dp"
-                        android:text="Tyrone"
-                        android:textAllCaps="true"
-                        android:textColor="#616161"
-                        android:textSize="16sp" />
+                        android:text="Tyrone" />
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginBottom="4dp"
-                        android:layout_marginLeft="56dp"
-                        android:layout_marginRight="56dp"
-                        android:background="@android:color/darker_gray" />
+                    <View style="@style/TeamUnderLine" />
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="horizontal"
+                        style="@style/TeamLayoutInside"
                         tools:context=".MainActivity">
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            style="@style/GoalsPointsText"
                             android:fontFamily="sans-serif-medium"
-                            android:gravity="center_horizontal"
-                            android:padding="4dp"
-                            android:text="Goals"
-                            android:textSize="14sp" />
+                            android:text="Goals" />
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            style="@style/GoalsPointsText"
                             android:fontFamily="sans-serif-medium"
-                            android:gravity="center_horizontal"
-                            android:padding="4dp"
-                            android:text="Points"
-                            android:textSize="14sp" />
+                            android:text="Points" />
+
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="horizontal"
+                        style="@style/TeamLayoutInside"
                         tools:context=".MainActivity">
 
                         <TextView
                             android:id="@+id/tyrone_goals"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            style="@style/GoalsPointsScore"
                             android:fontFamily="sans-serif-light"
-                            android:gravity="center_horizontal"
-                            android:text="0"
-                            android:textColor="#000000"
-                            android:textSize="16sp" />
+                            android:text="0" />
 
                         <TextView
                             android:id="@+id/tyrone_points"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            style="@style/GoalsPointsScore"
                             android:fontFamily="sans-serif-light"
-                            android:gravity="center_horizontal"
-                            android:text="0"
-                            android:textColor="#000000"
-                            android:textSize="16sp" />
+                            android:text="0" />
                     </LinearLayout>
 
                     <TextView
@@ -143,95 +102,49 @@
 
                 </LinearLayout>
 
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="12dp"
-                    android:background="@android:color/darker_gray" />
+                <View style="@style/TeamDivideLine" />
 
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
+                    style="@style/TeamLayout"
                     tools:context=".MainActivity">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        style="@style/TeamText"
                         android:fontFamily="sans-serif-medium"
-                        android:gravity="center_horizontal"
-                        android:paddingBottom="4dp"
-                        android:paddingTop="12dp"
-                        android:text="Donegal"
-                        android:textAllCaps="true"
-                        android:textColor="#616161"
-                        android:textSize="16sp" />
+                        android:text="Donegal" />
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginBottom="4dp"
-                        android:layout_marginLeft="56dp"
-                        android:layout_marginRight="56dp"
-                        android:background="@android:color/darker_gray" />
+                    <View style="@style/TeamUnderLine" />
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="horizontal"
+                        style="@style/TeamLayoutInside"
                         tools:context=".MainActivity">
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            style="@style/GoalsPointsText"
                             android:fontFamily="sans-serif-medium"
-                            android:gravity="center_horizontal"
-                            android:padding="4dp"
-                            android:text="Goals"
-                            android:textSize="14sp" />
+                            android:text="Goals" />
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            style="@style/GoalsPointsText"
                             android:fontFamily="sans-serif-medium"
-                            android:gravity="center_horizontal"
-                            android:padding="4dp"
-                            android:text="Points"
-                            android:textSize="14sp" />
+                            android:text="Points" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="horizontal"
+                        style="@style/TeamLayoutInside"
                         tools:context=".MainActivity">
 
                         <TextView
                             android:id="@+id/donegal_goals"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            style="@style/GoalsPointsScore"
                             android:fontFamily="sans-serif-light"
-                            android:gravity="center_horizontal"
-                            android:text="0"
-                            android:textColor="#000000"
-                            android:textSize="16sp" />
+                            android:text="0" />
 
                         <TextView
                             android:id="@+id/donegal_points"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            style="@style/GoalsPointsScore"
                             android:fontFamily="sans-serif-light"
-                            android:gravity="center_horizontal"
-                            android:text="0"
-                            android:textColor="#000000"
-                            android:textSize="16sp" />
+                            android:text="0" />
                     </LinearLayout>
 
                     <TextView
@@ -282,10 +195,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
+                    style="@style/TeamLayout"
                     tools:context=".MainActivity">
 
                     <Button
@@ -300,10 +210,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
+                    style="@style/TeamLayout"
                     tools:context=".MainActivity">
 
                     <Button
