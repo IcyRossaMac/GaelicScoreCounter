@@ -25,7 +25,7 @@
                     <TextView
                         style="@style/TeamText"
                         android:fontFamily="sans-serif-medium"
-                        android:text="Tyrone" />
+                        android:text="@string/tyrone" />
 
                     <View style="@style/TeamUnderLine" />
 
@@ -36,12 +36,12 @@
                         <TextView
                             style="@style/GoalsPointsText"
                             android:fontFamily="sans-serif-medium"
-                            android:text="Goals" />
+                            android:text="@string/goals" />
 
                         <TextView
                             style="@style/GoalsPointsText"
                             android:fontFamily="sans-serif-medium"
-                            android:text="Points" />
+                            android:text="@string/points" />
 
                     </LinearLayout>
 
@@ -53,35 +53,35 @@
                             android:id="@+id/tyrone_goals"
                             style="@style/GoalsPointsScore"
                             android:fontFamily="sans-serif-light"
-                            android:text="0" />
+                            android:text="@string/zero" />
 
                         <TextView
                             android:id="@+id/tyrone_points"
                             style="@style/GoalsPointsScore"
                             android:fontFamily="sans-serif-light"
-                            android:text="0" />
+                            android:text="@string/zero" />
                     </LinearLayout>
 
                     <TextView
                         style="@style/TotalScoreText"
                         android:fontFamily="sans-serif-medium"
-                        android:text="Total Score" />
+                        android:text="@string/total_score" />
 
                     <TextView
                         android:id="@+id/tyrone_total_score"
                         style="@style/TotalScoreNumber"
                         android:fontFamily="sans-serif-light"
-                        android:text="0" />
+                        android:text="@string/zero" />
 
                     <Button
                         style="@style/GoalsPointsButton"
                         android:onClick="addThreePointsAndGoalForTyrone"
-                        android:text="Goal (+3)" />
+                        android:text="@string/goal_plus_3" />
 
                     <Button
                         style="@style/GoalsPointsButton"
                         android:onClick="addOnePointsForTyrone"
-                        android:text="Point (+1)" />
+                        android:text="@string/point_plus_1" />
 
                 </LinearLayout>
 
@@ -94,7 +94,7 @@
                     <TextView
                         style="@style/TeamText"
                         android:fontFamily="sans-serif-medium"
-                        android:text="Donegal" />
+                        android:text="@string/donegal" />
 
                     <View style="@style/TeamUnderLine" />
 
@@ -105,12 +105,12 @@
                         <TextView
                             style="@style/GoalsPointsText"
                             android:fontFamily="sans-serif-medium"
-                            android:text="Goals" />
+                            android:text="@string/goals" />
 
                         <TextView
                             style="@style/GoalsPointsText"
                             android:fontFamily="sans-serif-medium"
-                            android:text="Points" />
+                            android:text="@string/points" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -121,35 +121,35 @@
                             android:id="@+id/donegal_goals"
                             style="@style/GoalsPointsScore"
                             android:fontFamily="sans-serif-light"
-                            android:text="0" />
+                            android:text="@string/zero" />
 
                         <TextView
                             android:id="@+id/donegal_points"
                             style="@style/GoalsPointsScore"
                             android:fontFamily="sans-serif-light"
-                            android:text="0" />
+                            android:text="@string/zero" />
                     </LinearLayout>
 
                     <TextView
                         style="@style/TotalScoreText"
                         android:fontFamily="sans-serif-medium"
-                        android:text="Total Score" />
+                        android:text="@string/total_score" />
 
                     <TextView
                         android:id="@+id/donegal_total_score"
                         style="@style/TotalScoreNumber"
                         android:fontFamily="sans-serif-light"
-                        android:text="0" />
+                        android:text="@string/zero" />
 
                     <Button
                         style="@style/GoalsPointsButton"
                         android:onClick="addThreePointsAndGoalForDonegal"
-                        android:text="Goal (+3)" />
+                        android:text="@string/goal_plus_3" />
 
                     <Button
                         style="@style/GoalsPointsButton"
                         android:onClick="addOnePointsForDonegal"
-                        android:text="Point (+1)" />
+                        android:text="@string/point_plus_1" />
 
                 </LinearLayout>
 
@@ -167,7 +167,7 @@
                     <Button
                         style="@style/HtFtButton"
                         android:onClick="halfTimeStatus"
-                        android:text="Half Time" />
+                        android:text="@string/half_time" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -177,7 +177,7 @@
                     <Button
                         style="@style/HtFtButton"
                         android:onClick="fullTimeStatus"
-                        android:text="Full Time" />
+                        android:text="@string/full_time" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -190,7 +190,7 @@
                     android:id="@+id/match_status"
                     style="@style/StatusText"
                     android:fontFamily="sans-serif-light"
-                    android:text="" />
+                    android:text="@string/empty" />
             </LinearLayout>
 
         </LinearLayout>
@@ -200,6 +200,6 @@
     <Button
         style="@style/ResetButton"
         android:onClick="resetScores"
-        android:text="Reset Scores" />
+        android:text="@string/reset_scores" />
 
 </RelativeLayout>

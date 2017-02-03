@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Gaelic Score Counter</string>
+    <string name="tyrone">Tyrone</string>
+    <string name="donegal">Donegal</string>
+    <string name="goals">Goals</string>
+    <string name="points">Points</string>
+    <string name="zero">0</string>
+    <string name="total_score">Total Score</string>
+    <string name="goal_plus_3">Goal +3</string>
+    <string name="point_plus_1">Point +1</string>
+    <string name="half_time">Half Time</string>
+    <string name="full_time">Full Time</string>
+    <string name="empty"></string>
+    <string name="reset_scores">Reset Scores</string>
 </resources>
